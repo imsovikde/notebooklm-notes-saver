@@ -1,0 +1,40 @@
+{
+  "manifest_version": 3,
+  "name": "NotebookLM Copy + History (v3-fixed)",
+  "version": "3.0.1",
+  "description": "Copy NotebookLM notes, keep history, export PDF/.doc, robust selectors and dedupe.",
+  "permissions": [
+    "storage",
+    "scripting",
+    "activeTab",
+    "clipboardWrite",
+    "tabs"
+  ],
+  "host_permissions": [
+    "*://*/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "default_title": "NotebookLM Copy + History"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "*://*.notebooklm.google.com/*",
+        "*://notebooklm.google.com/*",
+        "*://*.google.com/*"
+      ],
+      "js": ["content_script.js"],
+      "css": ["content_styles.css"]
+    }
+  ],
+  "web_accessible_resources": [
+    {
+      "resources": ["view.html","view.js","view.css"],
+      "matches": ["<all_urls>"]
+    }
+  ]
+}

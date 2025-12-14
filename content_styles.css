@@ -1,0 +1,38 @@
+/* content_styles.css - Google-like minimal button */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;500&display=swap');
+
+.nlm-action-btn {
+  font-family: 'Roboto', Arial, sans-serif;
+  font-size: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 8px 14px;
+  height: 36px;
+  border-radius: 10px;
+  border: 1px solid rgba(60,64,67,0.12);
+  background: #fff;
+  color: #202124;
+  box-shadow: 0 1px 2px rgba(60,64,67,0.06);
+  cursor: pointer;
+  margin-left: 8px;
+  transition: background .12s ease, box-shadow .12s ease, transform .06s ease;
+  user-select: none;
+  z-index: 99999999;
+}
+.nlm-action-btn:hover { box-shadow: 0 6px 18px rgba(60,64,67,0.12); transform: translateY(-1px); }
+.nlm-action-btn.primary { background:#1a73e8; color:#fff; border-color: rgba(26,115,232,0.9); }
+.nlm-toast {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  background: rgba(32,33,36,0.95);
+  color: #fff;
+  padding: 10px 14px;
+  border-radius: 8px;
+  box-shadow: 0 8px 22px rgba(0,0,0,0.25);
+  font-family: 'Roboto', Arial, sans-serif;
+  z-index: 9999999999;
+}
+.nlm-snippet { color:#5f6368; font-size:13px; margin-top:6px; }
